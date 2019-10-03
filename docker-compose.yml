@@ -260,7 +260,10 @@ services:
         - php-fpm
       networks:
         - frontend
-        - backend
+      networks:
+        backend:
+          aliases:
+            - nginxweb
 
 ### Blackfire ########################################
     blackfire:
